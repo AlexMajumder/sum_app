@@ -1,4 +1,3 @@
-import 'dart:js_interop';
 
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
         centerTitle: true,
       ),body: Padding(
       padding: const EdgeInsets.all(16),
-        child: Column(
+        child: Column(                          
         children: [
 
           TextField(
@@ -52,7 +51,11 @@ class _HomeScreeenState extends State<HomeScreeen> {
               fontWeight: FontWeight.bold,
               fontSize: 24
             ),)),
-            TextButton(onPressed: () {}, child: const Text('*')),
+            TextButton(onPressed: () {}, child: const Text('*',style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 24
+            ),)),
           ],)
 
         ],
