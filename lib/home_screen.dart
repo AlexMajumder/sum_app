@@ -1,4 +1,3 @@
-import 'dart:js_interop';
 
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
         centerTitle: true,
       ),body: Padding(
       padding: const EdgeInsets.all(16),
-        child: Column(
+        child: Column(                          
         children: [
 
           TextField(
@@ -34,7 +33,7 @@ class _HomeScreeenState extends State<HomeScreeen> {
               labelText: 'first Number'
             ),
           ),
-          const SizedBox(height: 16,),
+          const SizedBox(height: 16),
           TextField(
             controller: _secondNumberTEcontroller,
             keyboardType: TextInputType.number,
@@ -43,8 +42,10 @@ class _HomeScreeenState extends State<HomeScreeen> {
                 labelText: 'second Number'
             ),
           ),
-          const SizedBox(height: 16,),
-          Row(children: [
+          const SizedBox(height: 16),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+            children: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.add)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.remove)),
             TextButton(onPressed: () {}, child: const Text('/',style: TextStyle(
@@ -52,7 +53,11 @@ class _HomeScreeenState extends State<HomeScreeen> {
               fontWeight: FontWeight.bold,
               fontSize: 24
             ),)),
-            TextButton(onPressed: () {}, child: const Text('*')),
+            TextButton(onPressed: () {}, child: const Text('*',style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 24
+            ),)),
           ],)
 
         ],
