@@ -1,4 +1,6 @@
 
+import 'dart:ffi';
+import 'dart:nativewrappers/_internal/vm/lib/core_patch.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreeen extends StatefulWidget {
@@ -12,6 +14,9 @@ class _HomeScreeenState extends State<HomeScreeen> {
 
   final TextEditingController _firstNumberTEcontroller = TextEditingController();
   final TextEditingController _secondNumberTEcontroller = TextEditingController();
+
+  var _result = 0 ;
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +63,16 @@ class _HomeScreeenState extends State<HomeScreeen> {
                 fontWeight: FontWeight.bold,
                 fontSize: 24
             ),)),
-          ],)
+          ],),
+
+          const SizedBox(height: 24,),
+
+          Text('Result : $_result',style: TextStyle(
+            fontSize: 18,
+          ),)
+
+
+
 
         ],
             ),
