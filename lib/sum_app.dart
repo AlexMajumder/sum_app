@@ -6,6 +6,7 @@ class SumApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _result = 0;
     return const MaterialApp(
       home: HomeScreeen(),
     );
